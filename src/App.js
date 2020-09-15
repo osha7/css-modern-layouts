@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import SuperCentered from './components/super_centered';
 import './App.css';
+import DeconstructedPancake from "./components/deconstructed-pancake";
+import SidebarSays from "./components/sidebar-says"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+
+  render() {
+    return(
+      <div className="app-div-main">
+        <br />
+        <div className="app-div">
+          <SuperCentered />
+        </div>
+
+        <br /> <br /> <br />
+
+        <div className="deconstruct">
+          <DeconstructedPancake />
+        </div>
+
+        <br /> <br /> <br />
+
+        <div className="sidebar-says">
+          <SidebarSays />
+        </div>
+      </div>
+    )
+  }
 }
 
-export default App;
